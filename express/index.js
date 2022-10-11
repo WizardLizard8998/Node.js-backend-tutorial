@@ -3,7 +3,12 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.status(200).send("INDEX SAYFASI");
+  //res.status(200).send("INDEX SAYFASI");
+  res
+    .status(200)
+    .sendFile("L:\\patika\\Node.js-backend\\hw3\\hw3.js", (err) => {
+      console.log(err);
+    });
 });
 
 app.get("/about", (req, res) => {
